@@ -1,0 +1,188 @@
+###############################################################################
+# 🧱 General Temporary and System Files
+###############################################################################
+# Ignore editor swap files, temporary build artifacts, and OS metadata files.
+###############################################################################
+
+*.swp
+*.tmp
+*.log
+*.bak
+*.old
+*.orig
+*.rej
+*.DS_Store
+Thumbs.db
+
+
+###############################################################################
+# 🐍 Python, Node.js, Go and Other Build Artifacts
+###############################################################################
+# Ignore compiled bytecode, virtual environments, dependency caches,
+# and build directories produced by package managers or compilers.
+###############################################################################
+
+__pycache__/
+*.pyc
+*.pyo
+
+node_modules/
+dist/
+build/
+
+
+###############################################################################
+# 🧪 Local env files
+###############################################################################
+# Never commit real environment files. Allow only example template.
+###############################################################################
+
+.env*
+!.env.example
+
+
+###############################################################################
+# 🐳 Docker & Docker Compose Artifacts
+###############################################################################
+# Temporary files created by Docker and Compose during container runtime.
+###############################################################################
+
+*.pid
+*.sock
+*.tar.gz
+*.zip
+.docker/
+docker-compose.override.yml
+
+
+###############################################################################
+# ⚙️ Ansible and Local Automation Outputs
+###############################################################################
+# Ignore transient files produced by automation tools.
+###############################################################################
+
+*.retry
+.env.rendered
+*.out
+
+# Common local scratch dirs inside repo
+tmp/
+.cache/
+.lock/
+
+
+###############################################################################
+# 🧠 IDE and Editor Configurations
+###############################################################################
+# Ignore local project configurations specific to editors.
+###############################################################################
+
+# Visual Studio Code
+**/.vscode/
+!.vscode/.gitkeep
+
+# JetBrains IDEs (PyCharm, GoLand, IntelliJ, etc.)
+**/.idea/
+
+# VS Code workspace config files
+*.code-workspace
+
+
+###############################################################################
+# 🔄 CI/CD Generated Artifacts and Reports
+###############################################################################
+# Output directories from pipelines or local tests.
+###############################################################################
+
+coverage/
+reports/
+artifacts/
+logs/
+doc-img/
+
+
+###############################################################################
+# 🔒 Secrets folders — ignore contents, allow only placeholders/templates
+###############################################################################
+# Entire secrets folders are excluded from Git to prevent committing real creds.
+# Only docs and example templates are allowed.
+###############################################################################
+
+# Root-level secrets folder
+secrets/**
+!secrets/
+!secrets/README.md
+!secrets/.gitkeep
+!secrets/*.example.yaml
+!secrets/*.example.yml
+!secrets/*.example.json
+!secrets/*.example.env
+
+# Any nested secrets folder (e.g. compose/secrets, apps/*/secrets)
+**/secrets/**
+!**/secrets/
+!**/secrets/README.md
+!**/secrets/.gitkeep
+!**/secrets/*.example.yaml
+!**/secrets/*.example.yml
+!**/secrets/*.example.json
+!**/secrets/*.example.env
+
+
+###############################################################################
+# 🔑 Common Secret and Key Files (outside /secrets)
+###############################################################################
+# Ignore sensitive files wherever they appear.
+###############################################################################
+
+*.pem
+*.key
+*.crt
+*.pfx
+*.csr
+*.jks
+*.keystore
+*.p12
+secrets.yaml
+secret*.json
+
+
+###############################################################################
+# 🌍 Terraform
+###############################################################################
+# Note: commit .terraform.lock.hcl for reproducible provider versions.
+###############################################################################
+
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+
+###############################################################################
+# ☸️ Kubernetes
+###############################################################################
+
+.kube/
+kubeconfig*
+*.kubeconfig
+
+
+###############################################################################
+# 🔧 Local Infrastructure Tools
+###############################################################################
+
+.vagrant/
+packer_cache/
+
+
+###############################################################################
+# 🏗️ Project-specific artifacts (optional)
+###############################################################################
+# Keep these only if they are generated outputs in YOUR repo. If you intend
+# to version them, remove these lines.
+###############################################################################

@@ -63,3 +63,26 @@ variable "cluster_id" {
   type        = string
   description = "Target cluster ID"
 }
+
+###############################################################################
+# 📦 Existing template ID
+###############################################################################
+# ID of the template used to clone a new virtual machine.
+###############################################################################
+variable "template_id" {
+  type        = string
+  description = "Source template ID"
+}
+
+###############################################################################
+# 🧠 VM memory in bytes
+###############################################################################
+# Example:
+#   2147483648 = 2 GiB
+#   4294967296 = 4 GiB
+###############################################################################
+variable "vm_memory" {
+  type        = number
+  description = "Virtual machine memory in bytes"
+  default     = 4294967296
+}

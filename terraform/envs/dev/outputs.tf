@@ -1,7 +1,11 @@
 ###############################################################################
 # 📤 Outputs
 ###############################################################################
-# Temporary empty file.
-# Outputs will be added after the first working resources or data sources
-# are created.
-###############################################################################
+
+output "vm_id" {
+  value = ovirt_vm.test_vm.id
+}
+
+output "vm_name" {
+  value = ovirt_vm.test_vm.name
+}
